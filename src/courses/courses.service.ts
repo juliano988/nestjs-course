@@ -19,7 +19,7 @@ export class CoursesService {
     return await this.courseRepository.find({ relations: { tags: true } });
   }
 
-  async findOne(id: number) {
+  async findOne(id: string) {
     const course = await this.courseRepository.findOne({
       where: { id },
       relations: { tags: true },
@@ -41,7 +41,7 @@ export class CoursesService {
     return await this.courseRepository.save(course);
   }
 
-  async update(id: number, updateCourseDTO: UpdateCourseDTO) {
+  async update(id: string, updateCourseDTO: UpdateCourseDTO) {
     const tags = updateCourseDTO.tags?.length
       ? await Promise.all(
           updateCourseDTO.tags.map((tag) => this.preloadTagByName(tag)),
@@ -59,7 +59,7 @@ export class CoursesService {
     return await this.courseRepository.save(course);
   }
 
-  async remove(id: number) {
+  async remove(id: string) {
     const course = await this.courseRepository.findOne({
       where: { id },
     });
