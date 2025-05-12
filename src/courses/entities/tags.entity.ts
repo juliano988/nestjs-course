@@ -9,7 +9,7 @@ import {
 import { Course } from './courses.entity';
 import { randomUUID } from 'crypto';
 
-@Entity()
+@Entity('tags')
 export class Tag {
   @PrimaryGeneratedColumn('uuid')
   id: string;

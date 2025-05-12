@@ -5,6 +5,8 @@ import { CreateTagsTable1746811964429 } from 'src/migrations/1746811964429-Creat
 import { CreateCoursesTagsTable1746813453546 } from 'src/migrations/1746813453546-CreateCoursesTagsTable';
 import { AddCoursesIdToCoursesTagsTable1746814427774 } from 'src/migrations/1746814427774-AddCoursesIdToCoursesTagsTable';
 import { AddTagsIdToCoursesTagsTable1746816156928 } from 'src/migrations/1746816156928-AddTagsIdToCoursesTagsTable';
+import { UpdateRelationTableName1747073158993 } from 'src/migrations/1747073158993-UpdateRelationTableName';
+import { UpdateTagTableName1747073840810 } from 'src/migrations/1747073840810-UpdateTagTableName';
 
 export const dataSource = new DataSource({
   ...dataSourceOptions,
@@ -15,5 +17,7 @@ export const dataSource = new DataSource({
     CreateCoursesTagsTable1746813453546,
     AddCoursesIdToCoursesTagsTable1746814427774,
     AddTagsIdToCoursesTagsTable1746816156928,
+    UpdateRelationTableName1747073158993,
+    UpdateTagTableName1747073840810,
   ],
 });
