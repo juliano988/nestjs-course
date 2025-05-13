@@ -1,10 +1,10 @@
 export default {
   moduleFileExtensions: ['js', 'json', 'ts'],
-  testRegex: '.\\e2e-spec\\.ts$',
+  testRegex: '.*\\.e2e-spec\\.ts$',
   transform: {
-    '^.\\.(t|j)s$': 'ts-jest',
+    '^.+\\.(t|j)s$': 'ts-jest',
   },
-  collectionCoverageFrom: ['**/*.(t|s)s'],
+  collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: '../coverage',
   testEnvironment: 'node',
 };
